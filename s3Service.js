@@ -26,7 +26,7 @@ exports.s3Uploadv3 = async (files) => {
 
     urls.push({
       originalKey,
-      url: `https://nafasi.s3.amazonaws.com/${modifiedKey}`,
+      url: `https://${process.env.AWS_BUCKET_NAME}.s3.amazonaws.com/${modifiedKey}`,
     });
   });
 

@@ -29,7 +29,7 @@ const upload = multer({
 app.post("/upload", upload.array("file"), async (req, res) => {
   try {
     const results = await s3Uploadv3(req.files);
-    console.log(results);
+    // console.log(results);
 
     // Extract the modifiedKey from the results and include it in the JSON response
     const urls = results.map((result) => result.url);
